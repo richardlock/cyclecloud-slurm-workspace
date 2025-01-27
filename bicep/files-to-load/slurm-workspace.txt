@@ -71,7 +71,7 @@ Autoscale = $Autoscale
 
         [[[volume boot]]]
         Size = ${ifThenElse(BootDiskSize > 0, BootDiskSize, undefined)}
-        SSD = True
+        StorageAccountType = StandardSSD_LRS
 
         [[[configuration cyclecloud.mounts.nfs_shared]]]
         type = $NFSType
@@ -126,14 +126,14 @@ Autoscale = $Autoscale
 
         [[[volume sched]]]
         Size = $SchedFilesystemSize
-        SSD = True
+        StorageAccountType = StandardSSD_LRS
         Mount = builtinsched
         Persistent = True
         Disabled = ${!UseBuiltinSched || configuration_slurm_ha_enabled}
 
         [[[volume shared]]]
         Size = $FilesystemSize
-        SSD = True
+        StorageAccountType = StandardSSD_LRS
         Mount = builtinshared
         Persistent = True
         Disabled = ${!UseBuiltinShared || configuration_slurm_ha_enabled}

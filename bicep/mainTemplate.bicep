@@ -34,7 +34,7 @@ param infrastructureOnly bool = false
 param insidersBuild bool = false
 
 // build.sh will override this, but for development please set this yourself as a parameter
-param branch string = 'main'
+param branch string = 'storage_account_type'
 // This needs to be updated on each release. Our Cloud.Project records require a release tag
 param projectVersion string = '2024.12.18'
 //Internal developer use only: set true use custom CycleCloud release build 

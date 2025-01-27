@@ -141,7 +141,7 @@ module ccwVM './vm.bicep' = if (!infrastructureOnly) {
     dataDisks: [
       {
         name: '${ccVMName}-datadisk0'
-        disksku: 'Premium_LRS'
+        disksku: 'StandardSSD_LRS'
         size: split(cyclecloudBaseImage, ':')[0] == 'azurecyclecloud' ? 0 : 128
         caching: 'ReadWrite'
         createOption: split(cyclecloudBaseImage, ':')[0] == 'azurecyclecloud' ? 'FromImage' : 'Empty'
