@@ -44,7 +44,7 @@ Autoscale = $Autoscale
         slurm.disable_pmc = $configuration_slurm_disable_pmc
 
         # Disable ip-XXXXXXXX hostname generation
-        cyclecloud.hosts.standalone_dns.enabled = ${NodeNameIsHostname==false}
+        cyclecloud.hosts.standalone_dns.enabled = true
         cyclecloud.hosts.simple_vpc_dns.enabled = ${NodeNameIsHostname==false}
 
         # For fast spin-up after Deallocate, force an immediate re-converge on boot
